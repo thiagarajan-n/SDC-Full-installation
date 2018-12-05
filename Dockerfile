@@ -1,5 +1,5 @@
 FROM centos:6
-RUN yum -y update && yum clean all
+
 
 ARG FULLTARBALL_URL=http://archives.streamsets.com/datacollector/3.6.0/tarball/streamsets-datacollector-all-3.6.0.tgz
 
