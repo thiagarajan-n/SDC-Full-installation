@@ -5,9 +5,11 @@ ARG FULLTARBALL_URL=http://archives.streamsets.com/datacollector/3.6.0/tarball/s
 
 RUN mkdir /opt/local
 
-RUN curl -o /tmp/sdc.tgz -L ${FULLTARBALL_URL}
 
-RUN tar xzf /tmp/sdc.tgz --strip-components 1 -C /opt/local/
+COPY run_config.sh /tmp/
+# COPY streamsets-datacollector-core-3.5.2.tgz *.tgz /tmp/
+RUN /tmp/run_config.sh
+
 # ARG SDC_USER=sdc
 
 RUN chmod g=u /etc/passwd
