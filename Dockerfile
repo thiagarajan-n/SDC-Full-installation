@@ -6,6 +6,9 @@ ARG FULLTARBALL_URL=http://archives.streamsets.com/datacollector/3.6.0/tarball/s
 RUN mkdir /opt/local
 
 
+RUN chgrp -R 0 /tmp && \
+    chmod -R g=u /tmp
+
 COPY run_config.sh /tmp/
 # COPY streamsets-datacollector-core-3.5.2.tgz *.tgz /tmp/
 RUN /tmp/run_config.sh
