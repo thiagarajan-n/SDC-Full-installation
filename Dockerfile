@@ -9,7 +9,7 @@ RUN mkdir /opt/local
 RUN chgrp -R 0 /tmp && \
     chmod -R g=u /tmp
 
-RUN curl -o /tmp/sdc.tgz -L ${FULLTARBALL_URL}
+RUN curl -o /tmp/sdc.tgz -L http://archives.streamsets.com/datacollector/3.6.0/tarball/streamsets-datacollector-all-3.6.0.tgz
 
 RUN tar xzf /tmp/sdc.tgz --strip-components 1 -C /opt/local/
 
