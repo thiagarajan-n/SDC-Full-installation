@@ -1,4 +1,4 @@
-# FROM centos:6
+FROM centos:latest
 
 ARG FULLTARBALL_URL=http://archives.streamsets.com/datacollector/3.6.0/tarball/streamsets-datacollector-all-3.6.0.tgz
 
