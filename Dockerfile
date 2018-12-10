@@ -9,6 +9,8 @@ COPY run_config.sh /tmp/
 RUN chgrp -R 0 /tmp && \
     chmod -R g=u /tmp
 
+RUN uname -r
+
 RUN /tmp/run_config.sh
 
 
